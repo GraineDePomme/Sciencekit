@@ -15,8 +15,11 @@ let package = Package(
 
     targets: [
         .target(name: "ScienceKit", 
-                dependencies: [.product(name: "Numerics", package: "swift-numerics")]
+                dependencies: [.product(name: "Numerics", package: "swift-numerics"),
+                               "PhysicalConstants"]
         ),
+        
+        .target(name: "PhysicalConstants"),
 
         .testTarget(name: "ScienceKitTests", 
                     dependencies: ["ScienceKit"]
